@@ -1,0 +1,6 @@
+applications:
+- name:      node-stuff
+  memory:    128M
+
+# you may need to use a different hostname, if someone has already used this one
+  host:      node-stuff

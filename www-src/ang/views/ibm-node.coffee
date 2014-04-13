@@ -1,9 +1,9 @@
-<!-- Licensed under the Apache License. See footer for details. -->
+# Licensed under the Apache License. See footer for details.
 
-<p>Welcome to node stuff @ bluemix!
+AngTangle.controller ($scope) ->
+    $scope.setSubtitle "ibm node"
 
-<!--
-#===============================================================================
+#-------------------------------------------------------------------------------
 # Copyright IBM Corp. 2014
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -17,5 +17,4 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#===============================================================================
--->
+#-------------------------------------------------------------------------------

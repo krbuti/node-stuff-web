@@ -1,11 +1,9 @@
-# Licensed under the Apache License. See footer for details.
+<!-- Licensed under the Apache License. See footer for details. -->
 
-AngTangle.controller ($scope, data) ->
-    $scope.setSubtitle "help"
+info about IBM node
 
-    return
-
-#-------------------------------------------------------------------------------
+<!--
+#===============================================================================
 # Copyright IBM Corp. 2014
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -19,4 +17,5 @@ AngTangle.controller ($scope, data) ->
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#-------------------------------------------------------------------------------
+#===============================================================================
+-->

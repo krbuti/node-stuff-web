@@ -51,6 +51,8 @@ class Server
 
         app = express()
 
+        app.use redirectViews
+
         # serve up our html/css/js for the browser
         app.use express.static "www"
 
@@ -62,6 +64,33 @@ class Server
             deferred.resolve @
 
         return deferred.promise
+
+#-------------------------------------------------------------------------------
+# redirect views
+#-------------------------------------------------------------------------------
+RedirectedViewNames = """
+    ibm-node
+    how-to
+    reference
+    about
+"""
+
+RedirectedViewNames = RedirectedViewNames.trim().split /\s+/
+RedirectedViews     = {}
+
+for name in RedirectedViewNames
+    name = "/#{name}"
+    RedirectedViews[name] = true
+
+redirectViews = (request, response, next) ->
+#    utils.log "request.url: #{request.url}"
+#    return next()
+
+    return next() unless RedirectedViews.hasOwnProperty request.url
+
+    utils.log "redirecting #{request.url} to home page"
+    request.url = "/index.html"
+    return next()
 
 #-------------------------------------------------------------------------------
 # Copyright IBM Corp. 2014

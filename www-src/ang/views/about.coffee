@@ -1,21 +1,9 @@
 # Licensed under the Apache License. See footer for details.
 
-AngTangle.config ($locationProvider, $routeProvider, views) ->
+AngTangle.controller ($scope, data) ->
+    $scope.setSubtitle "about"
 
-    $locationProvider.html5Mode true
-
-    addRoute = (name, url="/#{name}") ->
-        $routeProvider.when url,
-            controller: name
-            template:   views["views/#{name}"]
-
-    $routeProvider.otherwise redirectTo:  "/"
-
-    addRoute "home",   "/"
-    addRoute "ibm-node"
-    addRoute "how-to"
-    addRoute "reference"
-    addRoute "about"
+    return
 
 #-------------------------------------------------------------------------------
 # Copyright IBM Corp. 2014

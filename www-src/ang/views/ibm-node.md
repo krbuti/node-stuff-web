@@ -6,8 +6,28 @@ IBM is providing a version of node.js for download, called
 The SDK can be downloaded from here:
 <http://www.ibm.com/developerworks/web/nodesdk/>
 
+By default, when you push a node application to BlueMix, it will use a buildpack
+which installs the IBM SDK for node.js as the runtime.  See the
+[how-to](/how-to) page for instructions on using an alternate buildpack, if you
+need to use a different version of node.
+
+When you push your app, you can tell if you're using the IBM SDK for node.js
+as your runtime, as you will see the following line (or similar) in the log:
+
+		-----> Installing IBM SDK for Node.js from admin cache
+
+The IBM SDK for node.js supports generating core dumps that can be
+analyzed with
+[Interactive Diagnostic Data Explorer](https://www.ibm.com/developerworks/community/groups/service/html/communityview?communityUuid=5efb4378-ebba-47da-8c0f-8841d669d0cc).
+
 You can post questions about the SDK, here:
 <https://www.ibm.com/developerworks/community/groups/community/node>
+
+If you'd like to follow along with the development work IBM is doing in node
+and v8, checkout the following git repos:
+
+* <https://github.com/andrewlow/v8ppc>
+* <https://github.com/andrewlow/node>
 
 <!--
 #===============================================================================

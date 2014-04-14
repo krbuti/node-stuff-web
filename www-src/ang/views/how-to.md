@@ -2,7 +2,7 @@
 
 <!-- ======================================================================= -->
 
-### Getting help
+### getting help
 
 You can post questions on the BlueMix Developers Community forum, here:
 <https://www.ibmdw.net/answers/?community=bluemix>
@@ -12,11 +12,11 @@ specific to node.js, please add a tag (below the editor) of "node.js".
 
 <!-- ======================================================================= -->
 
-### Installing pre-reqs
+### installing pre-reqs
 
 To use node.js on BlueMix, you will need to have done the following items:
 
-* register for BlueMix
+* registered for BlueMix
 
   To get access to BlueMix, you'll have to sign up with an IBM id.  If you don't
   already have an IBM id, you will be prompted to create one during registration.
@@ -35,7 +35,11 @@ To use node.js on BlueMix, you will need to have done the following items:
   You can alternatively install the IBM SDK for Node.js, here:
   <http://www.ibm.com/developerworks/web/nodesdk/>
 
-* install the Cloud Foundry `cf` command-line tool
+* installed the Cloud Foundry `cf` command-line tool
+
+  The `cf` command-line tool is used to manage your applications running
+  on BlueMix.  Information about installing and using `cf` is available here:
+  <http://docs.cloudfoundry.org/devguide/installcf/>
 
 <!-- ======================================================================= -->
 
@@ -62,6 +66,50 @@ directions on how to build and deploy this application.
 Blog post describing the `cf-env` package
 [available on npm](https://www.npmjs.org/package/cf-env),
 which will handle your `VCAP_*` environment variable parsing duties.
+
+<!-- ======================================================================= -->
+
+### errors during `npm rebuild` for native modules
+
+We are seeing errors building some native modules during staging.
+
+If you see the following error in your console during a `cf push`:
+
+    npm ERR! <some module>@<some version> install: `node-gyp rebuild`
+
+you can work around this by using an older version of node 0.10.x.  You can
+specify a version with the `engines` property in your `package.json` file, as
+follows:
+
+    {
+        "name":             "my-app-name",
+        "engines" :         { "node" : "=0.10.15" },
+        "dependencies":
+        ...
+    }
+
+Specifically, this problem can occur with node versions > 0.10.15, and is
+expected to be resoved in node version 0.10.27.
+
+Also see the
+[same issue on Pivotal's support page](http://support.run.pivotal.io/entries/45576443-NodeJS-App-Push-Failing).
+
+<!-- ======================================================================= -->
+
+### using an alternate node buildpack
+
+By default, BlueMix will use the [IBM SDK for node](/ibm-node) as the node.js
+runtime for the application running in the cloud.  If you'd like to use an
+alternate buildpack, to use an alternate runtime, we suggest you use the
+open source Cloud Foundry node buildpack, at:
+<https://github.com/cloudfoundry/heroku-buildpack-nodejs>
+
+To use this buildpack, you can invoke push your application with the `-b` option:
+
+    cf push -b https://github.com/cloudfoundry/heroku-buildpack-nodejs
+
+or
+[add a `buildpack` entry to your manifest.yml file](http://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html).
 
 <!--
 #===============================================================================

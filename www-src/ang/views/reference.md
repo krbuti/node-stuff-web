@@ -36,6 +36,12 @@ PaaS, like BlueMix.
 Documentation on Cloud Foundry's `cf` command-line tool, which you use to manage
 your applications running on BlueMix.
 
+
+### [the manifest.yml file](http://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html)
+
+The `manifest.yml` file in your application is used to set properties for your
+application when it's running on BlueMix.
+
 <!--
 #===============================================================================
 # Copyright IBM Corp. 2014

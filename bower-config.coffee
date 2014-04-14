@@ -2,52 +2,34 @@
 
 module.exports =
 
-    jquery:
-        version: "2.1.x"
-        files:
-            "dist/jquery.min.js":               "."
-        #    "dist/jquery.min.map":              "."
+  jquery:
+    version: "2.1.x"
+    files:
+      "dist/jquery.min.js":               "."
 
-    angular:
-        version: "1.2.x"
-        files:
-            "angular.min.js":                   "."
-        #    "angular.min.js.map":               "."
+  angular:
+    version: "1.2.x"
+    files:
+      "angular.min.js":                   "."
 
-    "angular-resource":
-        version: "1.2.x"
-        files:
-            "angular-resource.min.js":          "."
-        #    "angular-resource.min.js.map":      "."
+  "angular-resource":
+    version: "1.2.x"
+    files:
+      "angular-resource.min.js":          "."
 
-#    "angular-cookies":
-#        version: "1.2.x"
-#        files:
-#            "angular-cookies.min.js":           "."
-#        #    "angular-cookies.min.js.map":       "."
-
-    "angular-route":
-        version: "1.2.x"
-        files:
-            "angular-route.min.js":             "."
-        #    "angular-route.min.js.map":         "."
-
-#    "angular-touch":
-#        version: "1.2.x"
-#        files:
-#            "angular-touch.min.js":             "."
-#        #    "angular-touch.min.js.map":         "."
+  "angular-route":
+    version: "1.2.x"
+    files:
+      "angular-route.min.js":             "."
 
 
-    bootstrap:
-        version: "3.1.x"
-        files:
-            "dist/css/bootstrap.min.css":       "css"
-        #    "dist/css/bootstrap.css.map":       "css"
-            "dist/css/bootstrap-theme.min.css": "css"
-        #    "dist/css/bootstrap-theme.css.map": "css"
-            "dist/fonts/*":                     "fonts"
-            "dist/js/bootstrap.min.js":         "js"
+  bootstrap:
+    version: "3.1.x"
+    files:
+      "dist/css/bootstrap.min.css":       "css"
+      "dist/css/bootstrap-theme.min.css": "css"
+      "dist/fonts/*":                     "fonts"
+      "dist/js/bootstrap.min.js":         "js"
 
 #-------------------------------------------------------------------------------
 # Copyright IBM Corp. 2014

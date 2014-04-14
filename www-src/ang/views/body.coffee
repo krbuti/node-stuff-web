@@ -2,24 +2,24 @@
 
 AngTangle.controller body = ($scope,  data) ->
 
-    domReady = false
+  domReady = false
 
-    $ ->
-        domReady = true
+  $ ->
+    domReady = true
 
-    $scope.pkg = data.package
+  $scope.pkg = data.package
 
-    subTitle = ""
+  subTitle = ""
 
-    $scope.getSubtitle = ->
-        return "" if subTitle is ""
-        return ": #{subTitle}"
+  $scope.getSubtitle = ->
+    return "" if subTitle is ""
+    return ": #{subTitle}"
 
-    $scope.setSubtitle = (s) ->
-        subTitle = s
+  $scope.setSubtitle = (s) ->
+    subTitle = s
 
-    $scope.$on "$routeChangeSuccess", (next, current) ->
-        $(".navbar-collapse").collapse("hide") if domReady
+  $scope.$on "$routeChangeSuccess", (next, current) ->
+    $(".navbar-collapse").collapse("hide") if domReady
 
 #-------------------------------------------------------------------------------
 # Copyright IBM Corp. 2014

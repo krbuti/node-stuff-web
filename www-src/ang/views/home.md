@@ -1,6 +1,16 @@
 <!-- Licensed under the Apache License. See footer for details. -->
 
-Welcome to node stuff @ bluemix!
+This site contains information about using node.js on BlueMix.
+
+Use the menu above for more detailed topical information.
+
+Some quick links:
+
+* [BlueMix Dashboard](https://ace.ng.bluemix.net/)
+* [BlueMix Status](http://estado.ng.bluemix.net/)
+* [node.js docs](http://nodejs.org/api/)
+* [npm package repository](https://www.npmjs.org/)
+* [MDN JavaScript documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
 <!--
 #===============================================================================

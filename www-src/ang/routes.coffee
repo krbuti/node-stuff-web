@@ -2,20 +2,20 @@
 
 AngTangle.config ($locationProvider, $routeProvider, views) ->
 
-    $locationProvider.html5Mode true
+  $locationProvider.html5Mode true
 
-    addRoute = (name, url="/#{name}") ->
-        $routeProvider.when url,
-            controller: name
-            template:   views["views/#{name}"]
+  addRoute = (name, url="/#{name}") ->
+    $routeProvider.when url,
+      controller: name
+      template:   views["views/#{name}"]
 
-    $routeProvider.otherwise redirectTo:  "/"
+  $routeProvider.otherwise redirectTo:  "/"
 
-    addRoute "home",   "/"
-    addRoute "ibm-node"
-    addRoute "how-to"
-    addRoute "reference"
-    addRoute "about"
+  addRoute "home",   "/"
+  addRoute "ibm-node"
+  addRoute "how-to"
+  addRoute "reference"
+  addRoute "about"
 
 #-------------------------------------------------------------------------------
 # Copyright IBM Corp. 2014

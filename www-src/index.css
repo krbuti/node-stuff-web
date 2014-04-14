@@ -7,27 +7,28 @@
 }
 
 .md-comment {
-    display: none;
+  display: none;
 }
 
 html {
-    height:     100%;
+  height:     100%;
 }
 
 body {
-    height:     100%;
+  height:     100%;
+  overflow:   scroll
 }
 
 .logo-128 {
-    background-image:   url(images/icon-512.png);
-    width:              128px;
-    height:             128px;
+  background-image:   url(images/icon-512.png);
+  width:              128px;
+  height:             128px;
 }
 
 .logo-64 {
-    background-image:   url(images/icon-512.png);
-    width:              648px;
-    height:             648px;
+  background-image:   url(images/icon-512.png);
+  width:              648px;
+  height:             648px;
 }
 
 /*

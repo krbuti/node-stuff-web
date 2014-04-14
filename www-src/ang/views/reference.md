@@ -1,6 +1,40 @@
 <!-- Licensed under the Apache License. See footer for details. -->
 
-reference's
+### [node.js API documentation](http://nodejs.org/api/)
+
+Documents all the modules provided by node.js
+
+
+### [npm package repository](https://www.npmjs.org/)
+
+Thousands of packages for you to use in your node.js applications.
+
+
+### [Mozilla Developer Network documentation on JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+
+General documentation on JavaScript itself
+
+
+### [BlueMix docs](https://www.ng.bluemix.net/docs/index.jsp)
+
+Documentation on BlueMix.
+
+
+### [Bluemix Developers Community](https://www.ibmdw.net/bluemix/)
+
+Developer-based forums, blogs, event listings for BlueMix.
+
+
+### [Cloud Foundry docs](http://docs.cloudfoundry.org/)
+
+All the information you'd want to know about using a Cloud Foundry-based
+PaaS, like BlueMix.
+
+
+### [cf Command Line Interface](http://docs.cloudfoundry.org/devguide/installcf/)
+
+Documentation on Cloud Foundry's `cf` command-line tool, which you use to manage
+your applications running on BlueMix.
 
 <!--
 #===============================================================================

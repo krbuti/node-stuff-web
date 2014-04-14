@@ -1,12 +1,6 @@
 # Licensed under the Apache License. See footer for details.
 
-# require the Q promises library
-Q = require "q"
-
 pkg = require "../package.json"
-
-# get better stack traces for promises
-Q.longStackSupport = true
 
 #-------------------------------------------------------------------------------
 # global verbose logging setting
@@ -26,46 +20,46 @@ utils.DESCRIPTION = pkg.description
 # log a message
 #-------------------------------------------------------------------------------
 utils.log = (message) ->
-    console.log "#{utils.PROGRAM}: #{message}"
+  console.log "#{utils.PROGRAM}: #{message}"
 
 #-------------------------------------------------------------------------------
 # log a message and then exit
 #-------------------------------------------------------------------------------
 utils.logError = (message) ->
-    utils.log message
-    process.exit 1
+  utils.log message
+  process.exit 1
 
 #-------------------------------------------------------------------------------
 # log a message when VERBOSE is true
 #-------------------------------------------------------------------------------
 utils.vlog = (message) ->
-    return unless VERBOSE
+  return unless VERBOSE
 
-    utils.log message
+  utils.log message
 
 #-------------------------------------------------------------------------------
 # set VERBOSE on and off
 #-------------------------------------------------------------------------------
 utils.verbose = (value) ->
-    VERBOSE = !!value
+  VERBOSE = !!value
 
 #-------------------------------------------------------------------------------
 # return VERBOSE setting
 #-------------------------------------------------------------------------------
 utils.isVerbose = ->
-    VERBOSE
+  VERBOSE
 
 #-------------------------------------------------------------------------------
 # make a JSONable object super readable
 #-------------------------------------------------------------------------------
 utils.JL = (object) ->
-    JSON.stringify object, null, 4
+  JSON.stringify object, null, 4
 
 #-------------------------------------------------------------------------------
 # make a JSONable object kinda readable
 #-------------------------------------------------------------------------------
 utils.JS = (object) ->
-    JSON.stringify object
+  JSON.stringify object
 
 #-------------------------------------------------------------------------------
 # Copyright IBM Corp. 2014

@@ -12,7 +12,8 @@ fork me at [JazzHub](https://hub.jazz.net/project/pmuellr/node-stuff-web/overvie
 attributions
 --------------------------------------------------------------------------------
 
-none yet
+The "bluemix-js" logo (to the right), is derived from the "logo.js" project
+at <https://github.com/voodootikigod/logo.js>
 
 
 

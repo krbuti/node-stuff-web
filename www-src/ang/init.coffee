@@ -1,6 +1,6 @@
 # Licensed under the Apache License. See footer for details.
 
-AngTangle.module "app", ["ngRoute", "ngResource"]
+AngTangle.module "app", [ "ngRoute", "ngResource" ]
 
 #-------------------------------------------------------------------------------
 # Copyright IBM Corp. 2014

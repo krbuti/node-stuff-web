@@ -13,65 +13,66 @@ cli = exports
 
 #-------------------------------------------------------------------------------
 process.on "uncaughtException", (err) ->
-    utils.log "uncaught exception: #{err.stack || err}"
-    process.exit 1
+  utils.log "uncaught exception: #{err.stack || err}"
+  process.exit 1
 
 #-------------------------------------------------------------------------------
 exports.main = ->
 
-    # set up our command-line options options
-    options =
-        port:    [ "p", Number  ]
-        verbose: [ "v", Boolean ]
-        help:    [ "h", Boolean ]
+  # set up our command-line options options
+  options =
+    port:    [ "p", Number  ]
+    verbose: [ "v", Boolean ]
+    help:    [ "h", Boolean ]
 
-    shortOptions = "?": ["--help"]
-    for optionName, optionRec of options
-        if optionRec[0] isnt ""
-            shortOptions[optionRec[0]] = ["--#{optionName}"]
+  shortOptions = "?": ["--help"]
+  for optionName, optionRec of options
+    if optionRec[0] isnt ""
+      shortOptions[optionRec[0]] = ["--#{optionName}"]
 
-    for optionName, optionRec of options
-        options[optionName] = optionRec[1]
+  for optionName, optionRec of options
+    options[optionName] = optionRec[1]
 
-    # parse the command-line
-    parsed = nopt options, shortOptions, process.argv, 2
+  # parse the command-line
+  parsed = nopt options, shortOptions, process.argv, 2
 
-    args = parsed.argv.remain
+  args = parsed.argv.remain
 
-    # check if help requested
-    return help() if args[0] in ["?", "help"]
-    return help() if parsed.help
+  # check if help requested
+  return help() if args[0] in ["?", "help"]
+  return help() if parsed.help
 
-    # build options from command-line and environment
-    envOptions = {}
-    envOptions.port = process.env.PORT if process.env.PORT?
+  # build options from command-line and environment
+  envOptions = {}
+  envOptions.port = process.env.PORT if process.env.PORT?
 
-    options = _.defaults {}, envOptions, parsed
+  options = _.defaults {}, envOptions, parsed
 
-    # start the server
-    server.start options
+  # start the server
+  server.start options
 
-    .fail (err) ->
-        utils.logError "error starting server: #{err}"
+  .fail (err) ->
+    utils.logError "error starting server: #{err}"
 
-    # handle exceptions
-    .done()
+  # handle exceptions
+  .done()
+
 #-------------------------------------------------------------------------------
 help = ->
-    console.log """
-        #{utils.PROGRAM} #{utils.VERSION}
+  console.log """
+    #{utils.PROGRAM} #{utils.VERSION}
 
-            #{utils.DESCRIPTION}
+        #{utils.DESCRIPTION}
 
-        usage: #{utils.PROGRAM} [options]
+    usage: #{utils.PROGRAM} [options]
 
-        options:
-            -p --port NUMBER     tcp/ip to run server on
-            -v --verbose         be verbose
-            -h --help            print this help
+    options:
+        -p --port NUMBER     tcp/ip to run server on
+        -v --verbose         be verbose
+        -h --help            print this help
 
-        The port can also be specified by setting the PORT environment variable.
-    """
+    The port can also be specified by setting the PORT environment variable.
+  """
 
 #-------------------------------------------------------------------------------
 exports.main() if require.main is module

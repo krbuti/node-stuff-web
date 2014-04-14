@@ -1,6 +1,13 @@
 <!-- Licensed under the Apache License. See footer for details. -->
 
-info about IBM node
+IBM is providing a version of node.js for download, called
+"IBM SDK for Node.js".
+
+The SDK can be downloaded from here:
+<http://www.ibm.com/developerworks/web/nodesdk/>
+
+You can post questions about the SDK, here:
+<https://www.ibm.com/developerworks/community/groups/community/node>
 
 <!--
 #===============================================================================

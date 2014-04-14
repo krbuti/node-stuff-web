@@ -13,84 +13,63 @@ cfEnv   = require "cf-env"
 
 utils   = require "./utils"
 
+# get better stack traces for promises
+Q.longStackSupport = true
+
 # get core data from Cloud Foundry environment
 
 cfCore = cfEnv.getCore
-    name: utils.PROGRAM
+  name: utils.PROGRAM
 
 #-------------------------------------------------------------------------------
 # start the server, returning a promise of the server;
 # the promise is resolved when the server starts
 #-------------------------------------------------------------------------------
 exports.start = (options) ->
-    utils.verbose true if options.verbose
+  utils.verbose true if options.verbose
 
-    # sometimes you need to dump your ENV vars
-    # utils.vlog "process.env #{utils.JL process.env}"
+  # sometimes you need to dump your ENV vars
+  # utils.vlog "process.env #{utils.JL process.env}"
 
-    server = new Server options
-    server.start()
+  server = new Server options
+  server.start()
 
 #-------------------------------------------------------------------------------
 # class that manages the server
 #-------------------------------------------------------------------------------
 class Server
 
-    #---------------------------------------------------------------------------
-    constructor: (options={}) ->
-        options.port    ?= cfCore.port
-        options.verbose ?= false
+  #-----------------------------------------------------------------------------
+  constructor: (options={}) ->
+    options.port    ?= cfCore.port
+    options.verbose ?= false
 
-        {@port, @verbose, @customerDB} = options
+    {@port, @verbose} = options
 
-    #---------------------------------------------------------------------------
-    # start the server, returning a promise to itself when started
-    #---------------------------------------------------------------------------
-    start: ->
-        deferred = Q.defer()
+  #-----------------------------------------------------------------------------
+  # start the server, returning a promise to itself when started
+  #-----------------------------------------------------------------------------
+  start: ->
+    deferred = Q.defer()
 
-        app = express()
+    app = express()
 
-        app.use redirectViews
+    # serve up our html/css/js for the browser
+    app.use express.static "www"
 
-        # serve up our html/css/js for the browser
-        app.use express.static "www"
+    # if not a static file, let the client take a crack at it,
+    # by sending the home page
+    app.use (request, response, next) ->
+      response.sendfile "www/index.html"
 
-        # start the server, resolving the promise when started
-        utils.log "server starting: #{cfCore.url}"
-        app.listen @port, cfCore.bind, =>
-            utils.log "server started"
+    # start the server, resolving the promise when started
+    utils.log "server starting: #{cfCore.url}"
+    app.listen @port, cfCore.bind, =>
+      utils.log "server started"
 
-            deferred.resolve @
+      deferred.resolve @
 
-        return deferred.promise
-
-#-------------------------------------------------------------------------------
-# redirect views
-#-------------------------------------------------------------------------------
-RedirectedViewNames = """
-    ibm-node
-    how-to
-    reference
-    about
-"""
-
-RedirectedViewNames = RedirectedViewNames.trim().split /\s+/
-RedirectedViews     = {}
-
-for name in RedirectedViewNames
-    name = "/#{name}"
-    RedirectedViews[name] = true
-
-redirectViews = (request, response, next) ->
-#    utils.log "request.url: #{request.url}"
-#    return next()
-
-    return next() unless RedirectedViews.hasOwnProperty request.url
-
-    utils.log "redirecting #{request.url} to home page"
-    request.url = "/index.html"
-    return next()
+    return deferred.promise
 
 #-------------------------------------------------------------------------------
 # Copyright IBM Corp. 2014

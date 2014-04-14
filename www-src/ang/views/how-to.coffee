@@ -1,7 +1,7 @@
 # Licensed under the Apache License. See footer for details.
 
 AngTangle.controller ($scope) ->
-    $scope.setSubtitle "how to"
+  $scope.setSubtitle "how to"
 
 #-------------------------------------------------------------------------------
 # Copyright IBM Corp. 2014

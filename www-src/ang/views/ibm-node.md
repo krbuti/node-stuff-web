@@ -4,6 +4,7 @@ IBM is providing a version of node.js for download, called
 "IBM SDK for Node.js".
 
 The SDK can be downloaded from here:
+
 <http://www.ibm.com/developerworks/web/nodesdk/>
 
 By default, when you push a node application to BlueMix, it will use a buildpack
@@ -17,10 +18,11 @@ as your runtime, as you will see the following line (or similar) in the log:
 		-----> Installing IBM SDK for Node.js from admin cache
 
 The IBM SDK for node.js supports generating core dumps that can be
-analyzed with
+analyzed with the
 [Interactive Diagnostic Data Explorer](https://www.ibm.com/developerworks/community/groups/service/html/communityview?communityUuid=5efb4378-ebba-47da-8c0f-8841d669d0cc).
 
 You can post questions about the SDK, here:
+
 <https://www.ibm.com/developerworks/community/groups/community/node>
 
 If you'd like to follow along with the development work IBM is doing in node

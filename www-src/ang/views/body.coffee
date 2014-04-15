@@ -1,6 +1,8 @@
 # Licensed under the Apache License. See footer for details.
 
-AngTangle.controller body = ($scope,  data) ->
+titlePrefix = "node stuff @ bluemix"
+
+AngTangle.controller ($scope,  $document, data) ->
 
   domReady = false
 
@@ -15,8 +17,13 @@ AngTangle.controller body = ($scope,  data) ->
     return "" if subTitle is ""
     return ": #{subTitle}"
 
-  $scope.setSubtitle = (s) ->
-    subTitle = s
+  $scope.setSubtitle = (subtitle) ->
+    subTitle = subtitle
+
+    title = titlePrefix
+    title = "#{title}: #{subtitle}" unless subtitle is ""
+
+    $document[0].title = title
 
   $scope.$on "$routeChangeSuccess", (next, current) ->
     $(".navbar-collapse").collapse("hide") if domReady

@@ -1,12 +1,17 @@
 <!-- Licensed under the Apache License. See footer for details. -->
 
-This site contains information about using node.js on BlueMix.
+This site contains information about using node.js on
+[BlueMix](http://www-01.ibm.com/software/ebusiness/jstart/bluemix/).
+
+"Codename: BlueMix" is a beta product from IBM which provides
+Platform-as-a-Service capabilities built on top of the open source
+[Cloud Foundry project](http://CloudFoundry.org).
 
 Use the menu above for more detailed topical information.
 
 Some quick links:
 
-* [BlueMix Dashboard](https://ace.ng.bluemix.net/)
+* [BlueMix Registration/Dashboard](https://ace.ng.bluemix.net/)
 * [BlueMix Status](http://estado.ng.bluemix.net/)
 * [node.js docs](http://nodejs.org/api/)
 * [npm package repository](https://www.npmjs.org/)

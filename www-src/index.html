@@ -13,8 +13,8 @@
 
     <title>node stuff @ bluemix</title>
 
-    <link rel="shortcut icon" href="images/bluemix-js.png">
-    <link rel="icon"          href="images/bluemix-js.png">
+    <link rel="shortcut icon" href="images/bluemix-js-trans.png">
+    <link rel="icon"          href="images/bluemix-js-trans.png">
 
     <link rel="stylesheet" href="bower/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="bower/bootstrap/css/bootstrap-theme.min.css" />
@@ -72,15 +72,19 @@
       <script src="index.js"></script>
 
 <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  function gaFunc() {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-49999565-1', 'bluemix.net');
-  ga('require', 'displayfeatures');
-  ga('require', 'linkid', 'linkid.js');
-  ga('send', 'pageview');
+    ga('create', 'UA-49999565-1', 'bluemix.net');
+    ga('require', 'displayfeatures');
+    ga('require', 'linkid', 'linkid.js');
+    ga('send', 'pageview');
+  }
+
+  setTimeout(gaFunc,1000)
 
 </script>
 

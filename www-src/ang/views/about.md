@@ -1,11 +1,13 @@
 <!-- Licensed under the Apache License. See footer for details. -->
 
-<img src="images/bluemix-js.png" class="pull-right" width=128 height=128>
+<a href="https://ace.ng.bluemix.net/">
+<img src="images/bluemix-js-trans.png" class="pull-right" width=128 height=128>
+</a>
 
 source
 --------------------------------------------------------------------------------
 
-fork me at [JazzHub](https://hub.jazz.net/project/pmuellr/node-stuff-web/overview)
+fork me at [GitHub](https://github.com/node-at-bluemix/node-stuff-web)
 
 
 

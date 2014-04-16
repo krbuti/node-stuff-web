@@ -28,6 +28,13 @@ AngTangle.controller ($scope,  $document, data) ->
   $scope.$on "$routeChangeSuccess", (next, current) ->
     $(".navbar-collapse").collapse("hide") if domReady
 
+    # send Google Analytics another page view
+    try
+      ga("send", "pageview")
+    catch err
+      # ignore
+
+
 #-------------------------------------------------------------------------------
 # Copyright IBM Corp. 2014
 #

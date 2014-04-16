@@ -2,37 +2,47 @@
 
 titlePrefix = "node stuff @ bluemix"
 
-AngTangle.controller ($scope,  $document, data) ->
+AngTangle.controller ($scope,  $document, $location, data) ->
 
   domReady = false
 
   $ ->
     domReady = true
 
-  $scope.pkg = data.package
+  $scope.pkg         = data.package
+  $scope.titlePrefix = titlePrefix
+  $scope.subtitle    = ""
 
-  subTitle = ""
-
-  $scope.getSubtitle = ->
-    return "" if subTitle is ""
-    return ": #{subTitle}"
-
-  $scope.setSubtitle = (subtitle) ->
-    subTitle = subtitle
-
-    title = titlePrefix
-    title = "#{title}: #{subtitle}" unless subtitle is ""
-
-    $document[0].title = title
-
+  # update stuff on route change
   $scope.$on "$routeChangeSuccess", (next, current) ->
+
     $(".navbar-collapse").collapse("hide") if domReady
 
-    # send Google Analytics another page view
-    try
-      ga("send", "pageview")
-    catch err
-      # ignore
+    setTitle $scope, $document, $location
+
+    sendGoogleAnalytics()
+
+#-------------------------------------------------------------------------------
+setTitle = ($scope, $document, $location) ->
+  match = $location.path().match(/\/(.*)/)
+  return unless match
+  subtitle = match[1].replace(/-/g, " ")
+
+  if subtitle is ""
+    title    = titlePrefix
+  else
+    subtitle = ": #{subtitle}"
+    title    = "#{titlePrefix}#{subtitle}"
+
+  $document[0].title = title
+  $scope.subtitle    = subtitle
+
+#-------------------------------------------------------------------------------
+sendGoogleAnalytics = ->
+  try
+    ga("send", "pageview")
+  catch err
+    # ignore
 
 
 #-------------------------------------------------------------------------------

@@ -1,7 +1,7 @@
 <!-- Licensed under the Apache License. See footer for details. -->
 
 This site contains information about using node.js on
-[BlueMix](http://www-01.ibm.com/software/ebusiness/jstart/bluemix/).
+[BlueMix](https://www.ng.bluemix.net/docs/BlueMixIntro.jsp).
 
 "Codename: BlueMix" is a beta product from IBM which provides
 Platform-as-a-Service capabilities built on top of the open source

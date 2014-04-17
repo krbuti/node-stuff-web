@@ -3,7 +3,7 @@
 <!-- ======================================================================= -->
 
 <div class="panel panel-info">
-  <div class="panel-heading">getting help</div>
+  <div class="panel-heading"><strong>getting help</strong></div>
   <div class="panel-body">
     <p>You can post questions on the BlueMix Developers Community forum, here:
 
@@ -19,7 +19,7 @@
 <!-- ======================================================================= -->
 
 <div class="panel panel-info">
-  <div class="panel-heading">installing pre-reqs</div>
+  <div class="panel-heading"><strong>installing pre-reqs</strong></div>
   <div class="panel-body">
     <p>To use node.js on BlueMix, you will need to do the following items:
 
@@ -58,7 +58,7 @@
 <!-- ======================================================================= -->
 
 <div class="panel panel-info">
-  <div class="panel-heading">hello world for node.js on BlueMix</div>
+  <div class="panel-heading"><strong>hello world for node.js on BlueMix</strong></div>
   <div class="panel-body">
     <p><a href="https://hub.jazz.net/project/pmuellr/bluemix-hello-node/overview">https://hub.jazz.net/project/pmuellr/bluemix-hello-node/overview</a>
 
@@ -79,7 +79,7 @@
 <!-- ======================================================================= -->
 
 <div class="panel panel-info">
-  <div class="panel-heading">using the <code>cf-env</code> package to parse VCAP_SERVICES</div>
+  <div class="panel-heading"><strong>using the <code>cf-env</code> package to parse VCAP_SERVICES</strong></div>
   <div class="panel-body">
     <p><a href="https://www.ibmdw.net/bluemix/2014/03/12/cf-env-package-node-js/">https://www.ibmdw.net/bluemix/2014/03/12/cf-env-package-node-js/</a>
 
@@ -94,7 +94,7 @@
 <!-- ======================================================================= -->
 
 <div class="panel panel-info">
-  <div class="panel-heading">errors during <code>npm rebuild</code> for native modules</div>
+  <div class="panel-heading"><strong>errors during <code>npm rebuild</code> for native modules</strong></div>
   <div class="panel-body">
     <p>We are seeing errors building some native modules during staging.
 
@@ -123,13 +123,21 @@
     <p>Also see the
     <a href="http://support.run.pivotal.io/entries/45576443-NodeJS-App-Push-Failing">same issue on Pivotal's support page</a>.
 
+    <hr>
+
+    <h4><span class="label label-danger">2014-04-16</span></h4>
+
+    You can also use a
+    <a href="http://nodebp.ng.bluemix.net/">temporary buildpack</a>
+    that fixes the problem for node version 0.10.26 only.
+    See below for more documentation on alternate node buildpacks.
   </div>
 </div>
 
 <!-- ======================================================================= -->
 
 <div class="panel panel-info">
-  <div class="panel-heading">using an alternate node buildpack</div>
+  <div class="panel-heading"><strong>using an alternate node buildpack</strong></div>
   <div class="panel-body">
 
     <p>By default, BlueMix will use the <a href="/ibm-node">IBM SDK for node</a> as the node.js

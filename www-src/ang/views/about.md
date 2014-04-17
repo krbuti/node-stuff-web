@@ -1,7 +1,12 @@
 <!-- Licensed under the Apache License. See footer for details. -->
 
 <a href="https://ace.ng.bluemix.net/">
-<img src="images/bluemix-js-trans.png" class="pull-right" width=128 height=128>
+<div class="pull-right">
+<p><img src="images/bluemix-js-trans.png" width=128 height=128>
+<p><img src="images/ibm-8bar-js.png"      width=128 height=128>
+<p><img src="images/ibm-globe-js.png"     width=128 height=128>
+</div>
+
 </a>
 
 source
@@ -14,7 +19,7 @@ fork me at [GitHub](https://github.com/node-at-bluemix/node-stuff-web)
 attributions
 --------------------------------------------------------------------------------
 
-The "bluemix-js" logo (to the right), is derived from the "logo.js" project
+The logos (to the right) are derived from the "logo.js" project
 at <https://github.com/voodootikigod/logo.js>
 
 

@@ -1,5 +1,7 @@
 // Licensed under the Apache License. See footer for details.
 
+require("./newrelic").initialize()
+
 require("./lib/cli").main()
 
 //------------------------------------------------------------------------------

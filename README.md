@@ -100,6 +100,35 @@ You can of course also do all this through the
 
 
 
+enabling New Relic
+================================================================================
+
+This application can optionally be instrumented to run with
+[New Relic](http://newrelic.com/).  To enable newrelic, you should first sign
+into New Relic and crete a new **node.js** application.  This will provide you
+with an API key.
+
+You will pass the API key to the app via a Cloud Foundry environment variable;
+the variable is named `NEW_RELIC_LICENSE_KEY`, and so you should use the
+following command to set it:
+
+    cf set-env node-stuff NEW_RELIC_LICENSE_KEY 9081238291092...
+
+Once you do this, and restart the node-stuff application, you can monitor the
+app in the New Relic dashboard.
+
+If you don't set the Cloud Foundry environment variable, the New Relic
+instrumentation will not be avaiable.
+
+You can enable New Relic when running locally by setting the Cloud Foundry
+environment variable in your local shell; eg, on a mac:
+
+    NEW_RELIC_LICENSE_KEY=9081238291092... jbuild watch
+
+This will run `jbuild watch`, with the Cloud Foundry environment variable set.
+
+
+
 about the application
 ================================================================================
 

@@ -14,7 +14,7 @@ tasks = defineTasks exports,
   build: "build the server"
   test:  "run tests"
 
-WatchSpec = "lib-src/**/* www-src/**/* tests/**/* vcap-services-local.coffee"
+WatchSpec = "*.js lib-src lib-src/* www-src www-src/* tests tests/*"
 
 #-------------------------------------------------------------------------------
 mkdir "-p", "tmp"

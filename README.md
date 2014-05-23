@@ -127,6 +127,10 @@ environment variable in your local shell; eg, on a mac:
 
 This will run `jbuild watch`, with the Cloud Foundry environment variable set.
 
+The New Relic initialization for this app will set the `app_name` for you;
+you should set all other configuration parameters as environment variables.
+See the `lib-src/newrelic-init.coffee` file for more information.
+
 
 
 about the application

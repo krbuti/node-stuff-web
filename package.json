@@ -4,7 +4,7 @@
   "description":          "the source for the node-stuff.ng.bluemix.net site",
   "version":              "0.1.0",
   "dependencies": {
-    "cf-env":           "0.1.x",
+    "cfenv":            "0.2.x",
     "concat-stream":    "1.4.x",
     "express":          "3.4.x",
     "newrelic":         "1.5.x",

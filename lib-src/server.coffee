@@ -9,7 +9,7 @@ http = require "http"
 Q       = require "q"
 _       = require "underscore"
 express = require "express"
-cfEnv   = require "cf-env"
+cfenv   = require "cfenv"
 
 utils   = require "./utils"
 
@@ -18,8 +18,7 @@ Q.longStackSupport = true
 
 # get core data from Cloud Foundry environment
 
-cfCore = cfEnv.getCore
-  name: utils.PROGRAM
+AppEnv = cfenv.getAppEnv name: utils.PROGRAM
 
 #-------------------------------------------------------------------------------
 # start the server, returning a promise of the server;
@@ -41,7 +40,7 @@ class Server
 
   #-----------------------------------------------------------------------------
   constructor: (options={}) ->
-    options.port    ?= cfCore.port
+    options.port    ?= AppEnv.port
     options.verbose ?= false
 
     {@port, @verbose} = options
@@ -63,8 +62,8 @@ class Server
       response.sendfile "www/index.html"
 
     # start the server, resolving the promise when started
-    utils.log "server starting: #{cfCore.url}"
-    app.listen @port, cfCore.bind, =>
+    utils.log "server starting: #{AppEnv.url}"
+    app.listen @port, AppEnv.bind, =>
       utils.log "server started"
 
       deferred.resolve @

@@ -19,6 +19,10 @@ body {
   overflow:   scroll
 }
 
+pre, xmp, code {
+  font-weight: bold;
+}
+
 .logo-128 {
   background-image:   url(images/icon-512.png);
   width:              128px;

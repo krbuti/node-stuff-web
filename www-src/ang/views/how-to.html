@@ -28,7 +28,19 @@
 
     <ul>
 
-        <li><p>register for BlueMix
+        <li><p><b>install node.js on your development machine</b>
+
+          <p>You'll want a local install of node.js, so you can test your
+          programs locally before pushing them to the cloud.
+
+          <p>You can install the community build of node.js here:
+
+          <p><a href="http://nodejs.org/download/">http://nodejs.org/download/</a>
+
+          <p>You can alternatively install the IBM SDK for Node.js, here:
+          <p><a href="http://www.ibm.com/developerworks/web/nodesdk/">http://www.ibm.com/developerworks/web/nodesdk/</a>
+
+        <li><p><b>register for BlueMix</b>
 
           <p>To get access to BlueMix, you'll have to sign up with an IBM id.  If you don't
           already have an IBM id, you will be prompted to create one during registration.
@@ -39,20 +51,29 @@
 
           <p>Creating an IBM id should take just a few minutes.
 
-        <li><p>install node.js on your development machine
-
-          <p>You can install the community build of node.js here:
-
-          <p><a href="http://nodejs.org/download/">http://nodejs.org/download/</a>
-
-          <p>You can alternatively install the IBM SDK for Node.js, here:
-          <p><a href="http://www.ibm.com/developerworks/web/nodesdk/">http://www.ibm.com/developerworks/web/nodesdk/</a>
-
-        <li><p>install the Cloud Foundry <code>cf</code> command-line tool
+        <li><p><b>install the Cloud Foundry <code>cf</code> command-line tool</b>
 
           <p>The <code>cf</code> command-line tool is used to manage your applications running
-          on BlueMix.  Information about installing and using <code>cf</code> is available here:
-          <p><a href="http://docs.cloudfoundry.org/devguide/installcf/">http://docs.cloudfoundry.org/devguide/installcf/</a>
+          on BlueMix.  The installer for <code>cf</code> is available here:
+          <p><a href="https://github.com/cloudfoundry/cli/releases/">https://github.com/cloudfoundry/cli/releases/</a>
+
+        <li><p><b>log into your Bluemix account using the <code>cf</code> command-line tool</b>
+
+          <p>First run the following command to set the Bluemix installation location:
+
+            <pre>cf api https://api.ng.bluemix.net</pre>
+
+          <p>Then login with your Bluemix id; you'll be prompted for your email
+          and password:
+
+            <pre>cf login</pre>
+
+        </ul>
+
+        <p>You're ready to go!  You can run any <code>cf</code> commands now,
+        for instance <code>cf apps</code>, to show the status on any apps you
+        currently have running on Bluemix.
+
   </div>
 </div>
 

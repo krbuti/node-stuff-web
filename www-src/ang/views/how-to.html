@@ -6,11 +6,14 @@
   <div class="panel-heading"><strong>getting help</strong></div>
   <div class="panel-body">
     <p>You can post questions on the BlueMix Developers Community forum, here:
-
     <p><a href="https://developer.ibm.com/answers/?community=bluemix">https://developer.ibm.com/answers/?community=bluemix</a>
 
     <p>If your question is
     specific to node.js, please add a tag (below the editor) of <b>"node.js"</b>.
+
+    <p>To see all the node.js specific questions concerning Bluemix, head to
+    <p><a href="https://developer.ibm.com/answers/topics/node.html?smartspace=bluemix">https://developer.ibm.com/answers/topics/node.html?smartspace=bluemix</a>
+
   </div>
 </div>
 
@@ -77,40 +80,56 @@
 <!-- ======================================================================= -->
 
 <div class="panel panel-info">
-  <div class="panel-heading"><strong>using the <code>cf-env</code> package to parse VCAP_SERVICES</strong></div>
+  <div class="panel-heading"><strong>using the <code>cfenv</code> package to parse VCAP_SERVICES</strong></div>
   <div class="panel-body">
-    <p><a href="https://www.ibmdw.net/bluemix/2014/03/12/cf-env-package-node-js/">https://www.ibmdw.net/bluemix/2014/03/12/cf-env-package-node-js/</a>
+    <p><a href="https://developer.ibm.com/bluemix/2014/07/17/node-cfenv-makes-it-easy/">https://developer.ibm.com/bluemix/2014/07/17/node-cfenv-makes-it-easy/</a>
 
-    <p>Blog post describing the <code>cf-env</code> package
-    <a href="https://www.npmjs.org/package/cf-env">available on npm</a>,
+    <p>Blog post describing the <code>cfenv</code> package
+    <a href="https://www.npmjs.org/package/cfenv">available on npm</a>,
     which will handle your <code>VCAP_*</code> environment variable parsing duties.
+
+    <p>Also see <a href="https://github.com/pmuellr/bluemix-service-switcher">https://github.com/pmuellr/bluemix-service-switcher</a>
+    for sample usage and some tricks you can make use of with <code>cfenv</code>.
   </div>
 </div>
-
 
 
 <!-- ======================================================================= -->
 
 <div class="panel panel-info">
-  <div class="panel-heading"><strong>using an alternate node buildpack</strong></div>
+  <div class="panel-heading"><strong>developerWorks articles / samples</strong></div>
   <div class="panel-body">
 
-    <p>By default, BlueMix will use the <a href="/ibm-node">IBM SDK for node</a> as the node.js
-    runtime for the application running in the cloud.  If you'd like to use an
-    alternate buildpack, to use an alternate runtime, we suggest you use the
-    open source Cloud Foundry node buildpack, at:
+    <ul>
 
-    <p><a href="https://github.com/cloudfoundry/heroku-buildpack-nodejs">https://github.com/cloudfoundry/heroku-buildpack-nodejs</a>
+      <li><p><a href="http://www.ibm.com/developerworks/web/library/wa-twitter-wordcloud-app/index.html">Create a tool to analyze Twitter profiles using Node.js, Mongo, and D3</a>
+      <li><p><a href="http://www.ibm.com/developerworks/cloud/library/cl-watson-films-bluemix-app/index.html">Create a natural language question answering system with IBM Watson and Bluemix Services</a>
+      <li><p><a href="http://www.ibm.com/developerworks/web/library/wa-visualizetweets-app/index.html">Build a WebSocket app to visualize tweet volumes on a map</a>
+      <li><p><a href="http://www.ibm.com/developerworks/web/library/wa-storeall-app/index.html">Build a Node.js table-driven storage container application</a>
 
-    <p>To use this buildpack, you can invoke push your application with the <code>-b</code> option:
+    </ul>
+  </div>
+</div>
 
-    <pre>
-      cf push -b https://github.com/cloudfoundry/heroku-buildpack-nodejs.git
-    </pre>
+<!-- ======================================================================= -->
 
-    <p>or
+<div class="panel panel-info">
+  <div class="panel-heading"><strong>presentations</strong></div>
+  <div class="panel-body">
+    <ul>
+      <li><p><a href="http://pmuellr.github.io/slides/2014/10-node-js-on-a-paas/">node.js on a PaaS</a>
+        <p>some general info about using node.js on a PaaS like Bluemix
 
-    <a href="http://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html">add a <code>buildpack</code> entry to your manifest.yml file</a>.
+      <li><p><a href="http://pmuellr.github.io/slides/2014/04-what-happens-when-you-push-a-node-app/">what happens when you push a node app</a>
+        <p>what happens behind the scenes when you push a node app to Bluemix
+
+      <li><p><a href="http://pmuellr.github.io/slides/2014/04-debugging-node/">debugging node</a>
+        <p>how to debug your node.js app
+
+        <p>Also see <a href="https://github.com/pmuellr/cf-node-debug">cf-node-debug package</a>,
+        which enables debugging your app running on Bluemix using node-inspector.
+    </ul>
+
   </div>
 </div>
 

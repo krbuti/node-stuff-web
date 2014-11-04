@@ -15,6 +15,7 @@ Some quick links:
 * [BlueMix Status](http://estado.ng.bluemix.net/)
 * [node.js docs](http://nodejs.org/api/)
 * [npm package repository](https://www.npmjs.org/)
+* [nodeschool.io](http://nodeschool.io/)
 * [MDN JavaScript documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
 <!--

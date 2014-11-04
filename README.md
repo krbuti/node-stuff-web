@@ -1,7 +1,7 @@
 node-stuff
 ================================================================================
 
-Source for the <https://node-stuff.ng.bluemix.net> site.
+Source for the <https://node-stuff.mybluemix.net> site.
 
 
 installation

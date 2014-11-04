@@ -1,10 +1,10 @@
 {
-  "name":                 "node-stuff",
-  "main":                 "./lib/server",
-  "description":          "the source for the node-stuff.ng.bluemix.net site",
-  "version":              "0.1.0",
+  "name":               "node-stuff",
+  "main":               "./lib/server",
+  "description":        "the source for the node-stuff.mybluemix.net site",
+  "version":            "0.1.0",
   "dependencies": {
-    "cfenv":            "0.2.x",
+    "cfenv":            "1.0.x",
     "concat-stream":    "1.4.x",
     "express":          "3.4.x",
     "newrelic":         "1.5.x",

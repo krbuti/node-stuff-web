@@ -1,11 +1,11 @@
 <!-- Licensed under the Apache License. See footer for details. -->
 
 This site contains information about using node.js on
-[BlueMix](https://www.ng.bluemix.net/docs/BlueMixIntro.jsp).
+[BlueMix](https://www.ng.bluemix.net/docs/).
 
-"Codename: BlueMix" is a beta product from IBM which provides
+BlueMix is a product from IBM which provides
 Platform-as-a-Service capabilities built on top of the open source
-[Cloud Foundry project](http://CloudFoundry.org).
+[Cloud Foundry project](http://cloudfoundry.org).
 
 Use the menu above for more detailed topical information.
 

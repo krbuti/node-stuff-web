@@ -25,12 +25,6 @@ You can post questions about the SDK, here:
 
 <https://www.ibm.com/developerworks/community/groups/community/node>
 
-If you'd like to follow along with the development work IBM is doing in node
-and v8, checkout the following git repos:
-
-* <https://github.com/andrewlow/v8ppc>
-* <https://github.com/andrewlow/node>
-
 <!--
 #===============================================================================
 # Copyright IBM Corp. 2014

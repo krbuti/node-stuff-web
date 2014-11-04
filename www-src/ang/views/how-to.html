@@ -7,7 +7,7 @@
   <div class="panel-body">
     <p>You can post questions on the BlueMix Developers Community forum, here:
 
-    <p><a href="https://www.ibmdw.net/answers/?community=bluemix">https://www.ibmdw.net/answers/?community=bluemix</a>
+    <p><a href="https://developer.ibm.com/answers/?community=bluemix">https://developer.ibm.com/answers/?community=bluemix</a>
 
     <p>If your question is
     specific to node.js, please add a tag (below the editor) of <b>"node.js"</b>.
@@ -31,10 +31,8 @@
           already have an IBM id, you will be prompted to create one during registration.
 
           <p>Start here -
-          <a href="https://ace.ng.bluemix.net/">https://ace.ng.bluemix.net/</a>
-          - click the "LOGIN" link at the top.
-          You can create an IBM id on this page, or if you already have one, just use
-          the "Sign in" form.
+          <a href="https://bluemix.net/">https://bluemix.net/</a>
+          - click the "SIGN UP" link at the top.
 
           <p>Creating an IBM id should take just a few minutes.
 
@@ -90,49 +88,6 @@
 </div>
 
 
-
-<!-- ======================================================================= -->
-
-<div class="panel panel-info">
-  <div class="panel-heading"><strong>errors during <code>npm rebuild</code> for native modules</strong></div>
-  <div class="panel-body">
-    <p>We are seeing errors building some native modules during staging.
-
-    <p>If you see the following error in your console during a <code>cf push</code>:
-
-    <pre>
-      npm ERR! [some module]@[some version] install: <code>node-gyp rebuild</code>
-    </pre>
-
-    <p>you can work around this by using an older version of node 0.10.x.  You can
-    specify a version with the <code>engines</code> property in your <code>package.json</code> file, as
-    follows:
-
-    <pre>
-      {
-          "name":             "my-app-name",
-          "engines" :         { "node" : "=0.10.15" },
-          "dependencies":
-          ...
-      }
-    </pre>
-
-    <p>Specifically, this problem can occur with node versions > 0.10.15, and is
-    expected to be resoved in node version 0.10.27.
-
-    <p>Also see the
-    <a href="http://support.run.pivotal.io/entries/45576443-NodeJS-App-Push-Failing">same issue on Pivotal's support page</a>.
-
-    <hr>
-
-    <h4><span class="label label-danger">2014-04-16</span></h4>
-
-    You can also use a
-    <a href="http://nodebp.ng.bluemix.net/">temporary buildpack</a>
-    that fixes the problem for node version 0.10.26 only.
-    See below for more documentation on alternate node buildpacks.
-  </div>
-</div>
 
 <!-- ======================================================================= -->
 

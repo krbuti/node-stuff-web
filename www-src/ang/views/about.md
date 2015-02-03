@@ -3,7 +3,7 @@
 source
 --------------------------------------------------------------------------------
 
-fork me at [GitHub](https://github.com/node-at-bluemix/node-stuff-web)
+fork me at [GitHub](https://github.com/pmuellr/node-stuff-web)
 
 
 
